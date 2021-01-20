@@ -12,3 +12,9 @@ body {
     background-color: black;
     color: aliceblue;
 }
+
+iframe {
+    width: 450px;
+    height: 800px;
+    overflow: hidden;
+}
