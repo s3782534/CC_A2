@@ -28,7 +28,8 @@ $params = [
     ]
 ];
 try {
-    $result = $dynamodb->listTables();
+    $result = $dynamodb->getItem($params);
+    $tables = $dynamodb->listTables();
 
 
 
@@ -50,10 +51,6 @@ try {
                 <th>title</th>
             </tr>
             <tr>
-                <?php 
-                
-echo $result;
-                ?>
                 <td><iframe src="<?= $result['Item']['game_url']['S'] ?>" frameborder="0" scrolling="no"></iframe></td>
                 <td class="top yellow">
                     Reccomended Games
@@ -68,6 +65,7 @@ echo $result;
         </table>
     <footer>
         <h4>whack</h4>
+        <h4><?= $tables ?></h4>
     </footer>
 </body>
 </html>
