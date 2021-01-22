@@ -26,14 +26,7 @@ $params = [
     'Key' => "2048"
 ];
 
-try {
-    $result = $dynamodb->getItem($params);
-    print_r($result["Item"]);
 
-} catch (DynamoDbException $e) {
-    echo "Unable to get item:\n";
-    echo $e->getMessage() . "\n";
-}
 
 
 
