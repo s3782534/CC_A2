@@ -28,7 +28,9 @@ $params = [
     ]
 ];
 try {
-    $result = $dynamodb->getItem($params);
+    $result = $client->listTables();
+
+
 
 } catch (Exception $e) {
     echo "Unable to get item:\n";
@@ -47,9 +49,12 @@ try {
                 <th>title</th>
             </tr>
             <tr>
-                <!--<?php if (!$result['Item']['game_url']['S']){
-                   echo '<td>Unable to find game</td>'; 
-                }?>-->
+                <?php 
+                // TableNames contains an array of table names
+foreach ($result['TableNames'] as $tableName) {
+    echo $tableName . "\n";
+}
+                ?>
                 <td><iframe src="<?= $result['Item']['game_url']['S'] ?>" frameborder="0" scrolling="no"></iframe></td>
                 <td class="top yellow">
                     Reccomended Games
