@@ -28,7 +28,7 @@ $params = [
     ]
 ];
 try {
-    $result = $client->listTables();
+    $result = $dynamodb->listTables();
 
 
 
