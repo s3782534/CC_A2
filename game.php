@@ -34,6 +34,7 @@ try {
 
 } catch (Exception $e) {
     echo "Unable to get item:\n";
+    echo $e->getMessage() + "\n";
 }
 
 
