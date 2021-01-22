@@ -50,10 +50,8 @@ try {
             </tr>
             <tr>
                 <?php 
-                // TableNames contains an array of table names
-foreach ($result['TableNames'] as $tableName) {
-    echo $tableName . "\n";
-}
+                
+echo $result;
                 ?>
                 <td><iframe src="<?= $result['Item']['game_url']['S'] ?>" frameborder="0" scrolling="no"></iframe></td>
                 <td class="top yellow">
