@@ -21,9 +21,12 @@ $dynamodb = $sdk->createDynamoDb();
 
 $params = [
     'TableName' => "html5_games",
-    'Key' => "2048"
+    'Key' => [
+        'name' => [
+            'S' => '2048',
+        ],
+    ]
 ];
-
 try {
     $result = $dynamodb->getItem($params);
 
@@ -44,7 +47,10 @@ try {
                 <th>title</th>
             </tr>
             <tr>
-                <td><iframe src="https://s3782534-cca2-html5-games.s3.us-east-1.amazonaws.com/2048/index.html" frameborder="0" scrolling="no"></iframe></td>
+                <?php if (!$result['Item']){
+                   echo '<td>Unable to find game</td>'; 
+                }?>
+                <td><iframe src="<?= $result['Item']['game_url']['S'] ?>" frameborder="0" scrolling="no"></iframe></td>
                 <td class="top yellow">
                     Reccomended Games
                     <hr>
