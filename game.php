@@ -47,7 +47,7 @@ try {
                 <th>title</th>
             </tr>
             <tr>
-                <?php if (!$result['Item']){
+                <?php if (!$result['Item']['game_url']['S']){
                    echo '<td>Unable to find game</td>'; 
                 }?>
                 <td><iframe src="<?= $result['Item']['game_url']['S'] ?>" frameborder="0" scrolling="no"></iframe></td>

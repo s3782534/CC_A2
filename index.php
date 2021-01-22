@@ -11,7 +11,7 @@
         <h3>Whack</h3>
         Log In
     </header>
-    <h2><a href="game.html">New Games</a></h2>
+    <h2><a href="game.php">New Games</a></h2>
     <hr>
     <table>
         <tr>
