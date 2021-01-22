@@ -12,13 +12,28 @@ require 'vendor/autoload.php';
 
 use Aws\DynamoDb\Exception\DynamoDbException;
 use Aws\DynamoDb\Marshaler;
-    
+
+
 $sdk = new Aws\Sdk([
     'region'   => 'us-east-1',
     'version'  => 'latest'
 ]);
 
 $dynamodb = $sdk->createDynamoDb();
+
+$params = [
+    'TableName' => "html5_games",
+    'Key' => "2048"
+];
+
+try {
+    $result = $dynamodb->getItem($params);
+    print_r($result["Item"]);
+
+} catch (DynamoDbException $e) {
+    echo "Unable to get item:\n";
+    echo $e->getMessage() . "\n";
+}
 
 
 
