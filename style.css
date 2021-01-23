@@ -29,13 +29,12 @@ body {
 
 iframe {
     width: 100%;
-    height: 70%;
+    height: 50em;
     overflow: hidden;
 }
 
 .gameTable {
     width: 100%;
-    height: 30em;
     position: absolute;
 
 }
