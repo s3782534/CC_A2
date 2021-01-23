@@ -18,12 +18,14 @@ $sdk = new Aws\Sdk([
 ]);
 
 $dynamodb = $sdk->createDynamoDb();
+    
+$gameName = $_GET["game"];
 
 $params = [
     'TableName' => "html5_games",
     'Key' => [
         'name' => [
-            'S' => '2048',
+            'S' => $gameName,
         ],
     ]
 ];
@@ -48,7 +50,7 @@ try {
     </header>
         <table class="gameTable">
             <tr>
-                <th>title</th>
+                <th>$gameName</th>
             </tr>
             <tr>
                 <td><iframe src="<?= $result['Item']['game_url']['S'] ?>" frameborder="0" scrolling="no"></iframe></td>
