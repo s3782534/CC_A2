@@ -50,7 +50,7 @@ try {
     </header>
         <table class="gameTable">
             <tr>
-                <th>$gameName</th>
+                <th><?php echo $gameName ?></th>
             </tr>
             <tr>
                 <td><iframe src="<?= $result['Item']['game_url']['S'] ?>" frameborder="0" scrolling="no"></iframe></td>
