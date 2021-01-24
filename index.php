@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h3>Whack</h3>
+        <h3><a href="index.php">Whack</a></h3>
         Log In
     </header>
     <h2><a href="game.php?game=2048">New Games</a></h2>
