@@ -19,7 +19,12 @@ $sdk = new Aws\Sdk([
 $dynamodb = $sdk->createDynamoDb();
 
 $params = [
-    'TableName' => "html5_games"
+    'TableName' => "html5_games",
+    'Key' => [
+        'name' => [
+            'S' => "2048",
+        ],
+    ]
 ];
 try {
     $result = $dynamodb->get($params);
