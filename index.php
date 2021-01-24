@@ -45,7 +45,7 @@ try {
         </tr>
         <?php
         
-            foreach ($result as &$value) {
+            foreach ($result["items"] as &$value) {
                 echo $value;
             }
         ?>
