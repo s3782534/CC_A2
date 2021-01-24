@@ -22,7 +22,7 @@ $params = [
     'TableName' => "html5_games"
 ];
 try {
-    $result = $dynamodb->getItem($params);
+    $result = $dynamodb->get($params);
 
 
 } catch (Exception $e) {
