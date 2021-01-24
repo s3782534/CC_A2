@@ -27,7 +27,7 @@ $params = [
     ]
 ];
 try {
-    $result = $dynamodb->get($params);
+    $result = $dynamodb->getItem($params);
 
 
 } catch (Exception $e) {
