@@ -46,8 +46,8 @@ try {
         <?php
         
             foreach ($result["Items"] as &$value) {
-                $name = $value["name"];
-                print_r($value);
+                $name = $value["name"]["S"];
+                
                 echo "
                 <tr>
                     <th><<a href='game.php?game=$name'>$name</a></th>
