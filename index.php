@@ -46,9 +46,10 @@ try {
         <?php
         
             foreach ($result["Items"] as &$value) {
+                $name = $value["name"];
                 echo "
                 <tr>
-                    <th>$value</th>
+                    <th><<a href='game.php?game=$name'>$name</a></th>
                     <th>Icon</th>
                 </tr>
                 
@@ -56,14 +57,7 @@ try {
                 ";
             }
         ?>
-        <tr>
-            <td>Game 1</td>
-            <td>icon.png</td>
-        </tr>
-        <tr>
-            <td>Game 2</td>
-            <td>icon.png</td>
-        </tr>
+
     </table>
     <a><-</a>  1/1  <a>-></a>
     <hr>
