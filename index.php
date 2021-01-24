@@ -41,7 +41,6 @@ try {
     <table>
         <tr>
             <th>Title</th>
-            <th>Icon</th>
         </tr>
         <?php
         
@@ -50,12 +49,12 @@ try {
                 
                 echo "
                 <tr>
-                    <th><a href='game.php?game=$name'>$name</a></th>";
+                    <td><a href='game.php?game=$name'>$name</a><br />";
                     if ($value["icon_url"]){
                         $iconSrc = $value["icon_url"]["S"];
-                        echo "<th><img src='$iconSrc' alt='$name icon' height=32 width=32/></th>";
+                        echo "<img src='$iconSrc' alt='$name icon' class='icon'/></td>";
                     } else {
-                        echo "<th>Missing Icon</th>";
+                        echo "Missing Icon</td>";
                     }
                     
                 echo "</tr>";
