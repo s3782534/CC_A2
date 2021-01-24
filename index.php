@@ -20,14 +20,9 @@ $dynamodb = $sdk->createDynamoDb();
 
 $params = [
     'TableName' => "html5_games",
-    'Key' => [
-        'name' => [
-            'S' => "2048",
-        ],
-    ]
 ];
 try {
-    $result = $dynamodb->getItem($params);
+    $result = $dynamodb->scan($params);
 
 
 } catch (Exception $e) {
