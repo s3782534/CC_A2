@@ -6,6 +6,31 @@
     <title>Generic Games Site</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<?php 
+require 'vendor/autoload.php';
+
+use Aws\DynamoDb\Exception\DynamoDbException;
+
+$sdk = new Aws\Sdk([
+    'region'   => 'us-east-1',
+    'version'  => 'latest'
+]);
+
+$dynamodb = $sdk->createDynamoDb();
+
+$params = [
+    'TableName' => "html5_games"
+];
+try {
+    $result = $dynamodb->getItem($params);
+
+
+} catch (Exception $e) {
+    echo "Unable to get item:\n";
+    echo $e->getMessage() + "\n";
+}
+    
+?>
 <body>
     <header>
         <h3><a href="index.php">Whack</a></h3>
@@ -18,6 +43,12 @@
             <th>Title</th>
             <th>Icon</th>
         </tr>
+        <?php
+        
+            foreach ($result as &$value) {
+                echo $value;
+            }
+        ?>
         <tr>
             <td>Game 1</td>
             <td>icon.png</td>
