@@ -49,12 +49,12 @@ try {
                 
                 echo "
                 <tr>
-                    <td><a href='game.php?game=$name'>$name</a><br />";
+                    <td><a href='game.php?game=$name' class='gameLink'>$name<br />";
                     if ($value["icon_url"]){
                         $iconSrc = $value["icon_url"]["S"];
                         echo "<img src='$iconSrc' alt='$name icon' class='icon'/></td>";
                     } else {
-                        echo "Missing Icon</td>";
+                        echo "Missing Icon</a></td>";
                     }
                     
                 echo "</tr>";
