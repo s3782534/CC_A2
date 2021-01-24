@@ -1,6 +1,6 @@
 header {
-    background-color: aqua;
-    color: black;
+    background-color: #10394c;
+    color: #f6f4e0;
     border: none;
     position: relative;
     width: 100%;
@@ -8,35 +8,38 @@ header {
 
     margin: 0 -9999rem;
     padding: 0.25rem 9999rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
 footer {
-    background-color: aqua;
-    color: black;
-    position: fixed;
+    background-color: #10394c;
+    color: #f6f4e0;
+    position: absolute;
     bottom:0;
     margin: 0 -9999rem;
     padding: 0.25rem 9999rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
-    background-color: black;
-    color: aliceblue;
+    background-color: #07192a;
+    color: #f6f4e0;
     overflow-x: hidden;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Helvetica;
 }
 
 iframe {
-    width: 100%;
-    height: 50em;
+    margin-left: 30vw;
+    width: auto;
+    height: 70vh;
     overflow: hidden;
 }
 
+
 .gameTable {
     width: 100%;
-    position: absolute;
-
+    position:relative;
 }
 
 .top {
@@ -45,5 +48,23 @@ iframe {
 }
 
 .yellow {
-    color: yellow;
+    color: #f3ca4f;
+}
+
+.gameLink {
+    color:#f3ca4f;
+}
+
+.gameLink:hover {
+    color:#106281;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon {
+    width: 256px;
+    height: 256px;
 }
