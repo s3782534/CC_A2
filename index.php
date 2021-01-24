@@ -50,12 +50,15 @@ try {
                 
                 echo "
                 <tr>
-                    <th><a href='game.php?game=$name'>$name</a></th>
-                    <th>Icon</th>
-                </tr>
-                
-                
-                ";
+                    <th><a href='game.php?game=$name'>$name</a></th>";
+                    if ($value["icon_url"]){
+                        $iconSrc = $value["icon_url"]["S"];
+                        echo "<th><img src='$iconSrc' alt='$name icon' height=32 width=32/></th>";
+                    } else {
+                        echo "<th>Missing Icon</th>";
+                    }
+                    
+                echo "</tr>";
             }
         ?>
 
