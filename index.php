@@ -46,7 +46,14 @@ try {
         <?php
         
             foreach ($result["items"] as &$value) {
-                echo $value;
+                echo "
+                <tr>
+                    <th>$value</th>
+                    <th>Icon</th>
+                </tr>
+                
+                
+                ";
             }
         ?>
         <tr>
