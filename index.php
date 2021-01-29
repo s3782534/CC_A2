@@ -22,9 +22,7 @@ if (isset($jwt)){
     
     
     $keys = array_keys($jwt);
-    foreach($keys as $key){
-        echo "{$jwt[$key}<br />";
-        }
+    
     echo "<br />";
     echo $_SERVER['SCRIPT_NAME'];
 }
