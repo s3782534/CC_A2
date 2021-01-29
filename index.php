@@ -13,6 +13,7 @@ use Aws\DynamoDb\Exception\DynamoDbException;
    
 @$jwt = $_GET["#id_token"];
     
+echo "fuck";
 echo $jwt;
 if (isset($jwt)){
     print_r(json_decode(base64_decode(str_replace('_', '/', str_replace('-','+',explode('.', $jwt)[1])))));
