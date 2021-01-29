@@ -24,7 +24,7 @@ if (isset($jwt)){
     $keys = array_keys($jwt);
     print_r($jwt);
     
-    echo $jwt->{'cognito:username'};
+    $user = $jwt->{'cognito:username'};
     echo "<br />";
     echo $_SERVER['REQUEST_URI'];
 }
@@ -59,7 +59,16 @@ try {
     </script>
     <header>
         <h3><a href="index.php">Whack</a></h3>
-        Log In
+        <?php
+        if (isset($user)){
+            echo "Currently signed in as $user"   
+        } else {
+            echo "<a href='https://s3782534.auth.us-east-1.amazoncognito.com/login?client_id=15ks0tic2rhs9m1c4gu7hnqjm4&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ncflvf2fte.execute-api.us-east-1.amazonaws.com/'>Log In</a>"   
+        }
+        
+        
+        ?>
+        
     </header>
     <h2>New Games!</h2>
     <hr>
