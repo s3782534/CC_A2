@@ -25,7 +25,7 @@ if (isset($jwt)){
     print_r($jwt);
     
     echo "<br />";
-    echo $_SERVER['SCRIPT_FILENAME'];
+    echo $_SERVER['REQUEST_URI'];
 }
    
 
