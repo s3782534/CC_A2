@@ -22,10 +22,10 @@ if (isset($jwt)){
     
     
     $keys = array_keys($jwt);
-    echo $keys;
+    print_r($jwt);
     
     echo "<br />";
-    echo $_SERVER['QUERY_STRING'];
+    echo $_SERVER['SCRIPT_FILENAME'];
 }
    
 
