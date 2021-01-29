@@ -11,7 +11,7 @@ require 'vendor/autoload.php';
 
 use Aws\DynamoDb\Exception\DynamoDbException;
    
-@$jwt = $_GET["id_token"];
+@$jwt = $_GET["#id_token"];
     
 echo $jwt;
 if (isset($jwt)){
