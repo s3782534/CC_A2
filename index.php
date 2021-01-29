@@ -61,9 +61,9 @@ try {
         <h3><a href="index.php">Whack</a></h3>
         <?php
         if (isset($user)){
-            echo "Currently signed in as $user"   
+            echo "Currently signed in as $user";   
         } else {
-            echo "<a href='https://s3782534.auth.us-east-1.amazoncognito.com/login?client_id=15ks0tic2rhs9m1c4gu7hnqjm4&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ncflvf2fte.execute-api.us-east-1.amazonaws.com/'>Log In</a>"   
+            echo "<a href='https://s3782534.auth.us-east-1.amazoncognito.com/login?client_id=15ks0tic2rhs9m1c4gu7hnqjm4&response_type=token&scope=aws.cognito.signin.user.admin+email+openid+profile&redirect_uri=https://ncflvf2fte.execute-api.us-east-1.amazonaws.com/'>Log In</a>";   
         }
         
         
