@@ -30,7 +30,6 @@ body {
 }
 
 iframe {
-    margin-left: 30vw;
     width: auto;
     height: 70vh;
     overflow: hidden;
@@ -51,20 +50,22 @@ iframe {
     color: #f3ca4f;
 }
 
-.gameLink {
+a {
     color:#f3ca4f;
 }
 
-.gameLink:hover {
+a:hover {
     color:#106281;
 }
 
 .center {
     margin-left: auto;
     margin-right: auto;
+    width: 25%;
+    text-align: center;
 }
 
 .icon {
-    width: 64px;
-    height: 64px;
+    width: 256px;
+    height: 256px;
 }
