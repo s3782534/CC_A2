@@ -11,10 +11,12 @@ require 'vendor/autoload.php';
 
 use Aws\DynamoDb\Exception\DynamoDbException;
    
-@$jwt = $_GET["#id_token"];
+@$jwt = $_GET["id_token"];
+$access = $_GET["access_token"];
     
 echo "fuck";
 echo $jwt;
+echo $access;
 if (isset($jwt)){
     print_r(json_decode(base64_decode(str_replace('_', '/', str_replace('-','+',explode('.', $jwt)[1])))));
 }
