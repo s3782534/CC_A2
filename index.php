@@ -22,9 +22,10 @@ if (isset($jwt)){
     
     
     $keys = array_keys($jwt);
+    print_r($keys);
     
     echo "<br />";
-    echo $_SERVER['SCRIPT_NAME'];
+    echo $_SERVER['PHP_SELF'];
 }
    
 
