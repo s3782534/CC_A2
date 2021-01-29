@@ -10,7 +10,15 @@
 require 'vendor/autoload.php';
 
 use Aws\DynamoDb\Exception\DynamoDbException;
+   
+@$jwt = $_GET["id_token"];
+    
+if (isset($jwt)){
+    print_r(json_decode(base64_decode(str_replace('_', '/', str_replace('-','+',explode('.', $jwt)[1])))));
+}
 
+
+    
 $sdk = new Aws\Sdk([
     'region'   => 'us-east-1',
     'version'  => 'latest'
@@ -29,6 +37,7 @@ try {
     echo "Unable to get item:\n";
     echo $e->getMessage() + "\n";
 }
+    
     
 ?>
 <body>
