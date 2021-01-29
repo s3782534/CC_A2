@@ -24,7 +24,7 @@ if (isset($jwt)){
     $keys = array_keys($jwt);
     print_r($jwt);
     
-    echo $jwt->email;
+    echo $jwt->cognito:username;
     echo "<br />";
     echo $_SERVER['REQUEST_URI'];
 }
