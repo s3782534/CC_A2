@@ -24,6 +24,7 @@ if (isset($jwt)){
     $keys = array_keys($jwt);
     print_r($jwt);
     
+    echo $jwt->email;
     echo "<br />";
     echo $_SERVER['REQUEST_URI'];
 }
@@ -52,6 +53,10 @@ try {
     
 ?>
 <body>
+    <script>
+        console.log(window.location.href);
+        
+    </script>
     <header>
         <h3><a href="index.php">Whack</a></h3>
         Log In
