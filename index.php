@@ -20,8 +20,11 @@ if (isset($jwt)){
     #Convertica eCommerce & membership website development. Available at: <https://www.converticacommerce.com/support-maintenance/security/php-one-liner-decode-jwt-json-web-tokens/> [Accessed 29 January 2021].
     $jwt = json_decode(base64_decode(str_replace('_', '/', str_replace('-','+',explode('.', $jwt)[1]))));
     
-    print_r($jwt);
-    echo $jwt->"cognito:username";
+    
+    $keys = array_keys($jwt);
+    foreach($keys as $key){
+        echo "{$jwt[$key}<br />";
+        }
     echo "<br />";
     echo $_SERVER['SCRIPT_NAME'];
 }
