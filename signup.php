@@ -12,6 +12,13 @@ $msg = "";
 @$email = $_POST["email"];
 @$password = $_POST["password"];
 @$cpassword = $_POST["cpassword"];
+    
+use Aws\CognitoIdentity\CognitoIdentityClient;
+
+$client = CognitoIdentityClient::factory(array(
+    'region'   => 'us-east-1',
+    'version'  => 'latest'
+));
 
 if (isset($name)){
     if (strpos($email,"@") === false){ //checking if email has @ to prevent unvalid emails
