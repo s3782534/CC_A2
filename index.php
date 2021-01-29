@@ -10,6 +10,20 @@
 require 'vendor/autoload.php';
 
 use Aws\DynamoDb\Exception\DynamoDbException;
+    
+@$jwt = $_GET["id_token"];
+    
+echo "fuck";
+
+if (isset($jwt)){
+    #One liner decoding JWT token taken from
+    #
+    #development, C., Maintenance, S. and Tokens), P., 2021. PHP One-Liner To Decode JWT (JSON Web Tokens) | 2019. [online] 
+    #Convertica eCommerce & membership website development. Available at: <https://www.converticacommerce.com/support-maintenance/security/php-one-liner-decode-jwt-json-web-tokens/> [Accessed 29 January 2021].
+    $jwt = print_r(json_decode(base64_decode(str_replace('_', '/', str_replace('-','+',explode('.', $jwt)[1])))));
+    
+    echo $jwt["coginto:username"];
+}
    
 
     
