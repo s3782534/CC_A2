@@ -48,23 +48,10 @@ try {
         <h3><a href="index.php">Whack</a></h3>
         Log In
     </header>
-        <table class="gameTable">
-            <tr>
-                <th><?php echo $gameName ?></th>
-            </tr>
-            <tr>
-                <td><iframe src="<?= $result['Item']['game_url']['S'] ?>" frameborder="0" scrolling="no"></iframe></td>
-                <td class="top yellow">
-                    Reccomended Games
-                    <hr>
-                    <ul>
-                        <li>another game</li>
-                        <li>lorem ipsum</li>
-                    </ul>
-                    
-                </td>
-            </tr>
-        </table>
+    <div class="center">
+        <?php echo $gameName ?>
+        <iframe src="<?= $result['Item']['game_url']['S'] ?>" frameborder="0" scrolling="no"></iframe>
+    </div>
     <footer>
         <h4>whack</h4>
         <h4><?= $tables ?></h4>
