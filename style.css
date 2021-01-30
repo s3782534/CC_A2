@@ -35,10 +35,10 @@ iframe {
     overflow: hidden;
 }
 
-
-.gameTable {
-    width: 100%;
-    position:relative;
+hr {
+    margin: 30px -20px 20px;
+    border: 0;
+    border-top: 1px solid #f6f4e0;
 }
 
 .top {
