@@ -31,10 +31,6 @@ $params = [
 ];
 try {
     $result = $dynamodb->getItem($params);
-    $tables = $dynamodb->listTables();
-
-
-
 } catch (Exception $e) {
     echo "Unable to get item:\n";
     echo $e->getMessage() + "\n";
@@ -54,7 +50,6 @@ try {
     </div>
     <footer>
         <h4>whack</h4>
-        <h4><?= $tables ?></h4>
     </footer>
 </body>
 </html>
