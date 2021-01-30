@@ -49,7 +49,7 @@ try {
         Log In
     </header>
     <div class="center">
-        <?php echo $gameName ?>
+        <h2><?php echo $gameName ?></h2> <br />
         <iframe src="<?= $result['Item']['game_url']['S'] ?>" frameborder="0" scrolling="no"></iframe>
     </div>
     <footer>
