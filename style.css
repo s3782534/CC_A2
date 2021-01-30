@@ -15,7 +15,7 @@ header {
 footer {
     background-color: #10394c;
     color: #f6f4e0;
-    position: static;
+    position: fixed;
     bottom:0;
     margin: 0 -9999rem;
     padding: 0.25rem 9999rem;
