@@ -19,11 +19,7 @@ if (isset($jwt)){
     #development, C., Maintenance, S. and Tokens), P., 2021. PHP One-Liner To Decode JWT (JSON Web Tokens) | 2019. [online] 
     #Convertica eCommerce & membership website development. Available at: <https://www.converticacommerce.com/support-maintenance/security/php-one-liner-decode-jwt-json-web-tokens/> [Accessed 29 January 2021].
     $jwt = json_decode(base64_decode(str_replace('_', '/', str_replace('-','+',explode('.', $jwt)[1]))));
-    
-    
-    $keys = array_keys($jwt);
-    print_r($jwt);
-    
+        
     $user = $jwt->{'cognito:username'};
     echo "<br />";
     echo $_SERVER['REQUEST_URI'];
