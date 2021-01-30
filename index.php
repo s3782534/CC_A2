@@ -21,8 +21,7 @@ if (isset($jwt)){
     $jwt = json_decode(base64_decode(str_replace('_', '/', str_replace('-','+',explode('.', $jwt)[1]))));
         
     $user = $jwt->{'cognito:username'};
-    echo "<br />";
-    echo $_SERVER['REQUEST_URI'];
+
 }
    
 
