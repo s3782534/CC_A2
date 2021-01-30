@@ -42,7 +42,6 @@ try {
 <body>
     <header>
         <h3><a href="index.php">Whack</a></h3>
-        Log In
     </header>
     <div class="center">
         <h2><?php echo $gameName ?></h2> <br />
