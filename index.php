@@ -48,10 +48,6 @@ try {
     
 ?>
 <body>
-    <script>
-        console.log(window.location.href);
-        
-    </script>
     <header>
         <h3><a href="index.php">Whack</a></h3>
         <?php
